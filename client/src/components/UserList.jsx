@@ -9,7 +9,6 @@ export default function UserList() {
     fetch('http://localhost:3030/jsonstore/users')
       .then(response => response.json())
       .then(result => {
-        console.log(result)
         setUsers(Object.values(result))
       })
       .catch(( err ) => alert(err.message));
