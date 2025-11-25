@@ -12,6 +12,10 @@ function App() {
     const createUserClickHandler =() => {
         setShowCreateUser(true)
     }
+
+    const closeUserModalHandler = () => {
+        setShowCreateUser(false)
+    }
     return (
         <div>
             <Header />
@@ -27,7 +31,7 @@ function App() {
                     <Pagination />
                 </section>
                 
-                {showCreateUser && <CreateUserModal />}
+                {showCreateUser && <CreateUserModal onClose={closeUserModalHandler}/>}
             </main>
 
             <Footer />
